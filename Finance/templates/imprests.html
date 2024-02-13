@@ -1,0 +1,247 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Dashboard {% endblock %}
+
+{% block body %} 
+<div class="page-breadcrumb">
+    <div class="row">
+        <div class="col-7 align-self-center">
+            <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Imprest Requisition</h4>
+            <div class="d-flex align-items-center">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb m-0 p-0">
+                        <li class="breadcrumb-item"><a href="/" class="text-muted">Home</a></li>
+                        <li class="breadcrumb-item text-muted active" aria-current="page">Imprest Requisition</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <div class="col-5 align-self-center">
+            <div class="customize-input float-end">
+                <!-- <select class="custom-select custom-select-set form-control bg-white border-0 custom-shadow custom-radius">
+                    <option selected>Aug 23</option>
+                    <option value="1">July 23</option>
+                    <option value="2">Jun 23</option>
+                </select> -->
+                <button class="form-control btn btn-rounded btn-outline-secondary px-3"><i class="fa-solid fa-file-circle-plus"></i> New Imprest</button>
+            </div>
+        </div>
+    </div>
+</div>  
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <ul class="nav nav-tabs nav-justified nav-bordered mb-3">
+                        <li class="nav-item">
+                            <a href="#home-b1" data-bs-toggle="tab" aria-expanded="true" class="nav-link active">
+                                <i class="mdi mdi-home-variant d-lg-none d-block me-1"></i>
+                                <span class="d-lg-block">Open</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#profile-b1" data-bs-toggle="tab" aria-expanded="false"
+                                class="nav-link ">
+                                <i class="mdi mdi-account-circle d-lg-none d-block me-1"></i>
+                                <span class="d-lg-block">Pending Approval</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#settings-b1" data-bs-toggle="tab" aria-expanded="false" class="nav-link">
+                                <i class="mdi mdi-settings-outline d-lg-none d-block me-1"></i>
+                                <span class="d-lg-block">Approved</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div class="tab-pane show active" id="home-b1">
+                            <div class="">
+                                <h4 class="card-title">Open Imprests</h4>
+                                <br>
+                                <div class="table-responsive">
+                                    <table id="multi_col_order" class="table border table-striped table-bordered text-nowrap" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>First name</th>
+                                                <th>Last name</th>
+                                                <th>Position</th>
+                                                <th>Office</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr >
+                                                <td>Tiger</td>
+                                                <td>Nixon</td>
+                                                <td>System Architect</td>
+                                                <td>Edinburgh</td>
+                                                <td>
+                                                    <a href="/imprest/details/" class="btn btn-primary btn-sm btn-rounded px-3"><i class="fa fa-folder-open"></i> Open</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Garrett</td>
+                                                <td>Winters</td>
+                                                <td>Accountant</td>
+                                                <td>Tokyo</td>
+                                                <td>
+                                                    <a href="/imprest/details/" class="btn btn-primary btn-sm btn-rounded px-3"><i class="fa fa-folder-open"></i> Open</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ashton</td>
+                                                <td>Cox</td>
+                                                <td>Junior Technical Author</td>
+                                                <td>San Francisco</td>
+                                                <td>
+                                                    <a href="/imprest/details/" class="btn btn-primary btn-sm btn-rounded px-3"><i class="fa fa-folder-open"></i> Open</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cedric</td>
+                                                <td>Kelly</td>
+                                                <td>Senior Javascript Developer</td>
+                                                <td>Edinburgh</td>
+                                                <td>
+                                                    <a href="/imprest/details/" class="btn btn-primary btn-sm btn-rounded px-3"><i class="fa fa-folder-open"></i> Open</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Airi</td>
+                                                <td>Satou</td>
+                                                <td>Accountant</td>
+                                                <td>Tokyo</td>
+                                                <td>
+                                                    <a href="/imprest/details/" class="btn btn-primary btn-sm btn-rounded px-3"><i class="fa fa-folder-open"></i> Open</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Brielle</td>
+                                                <td>Williamson</td>
+                                                <td>Integration Specialist</td>
+                                                <td>New York</td>
+                                                <td>
+                                                    <a href="/imprest/details/" class="btn btn-primary btn-sm btn-rounded px-3"><i class="fa fa-folder-open"></i> Open</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Herrod</td>
+                                                <td>Chandler</td>
+                                                <td>Sales Assistant</td>
+                                                <td>San Francisco</td>
+                                                <td>
+                                                    <a href="/imprest/details/" class="btn btn-primary btn-sm btn-rounded px-3"><i class="fa fa-folder-open"></i> Open</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Rhona</td>
+                                                <td>Davidson</td>
+                                                <td>Integration Specialist</td>
+                                                <td>Tokyo</td>
+                                                <td>
+                                                    <a href="/imprest/details/" class="btn btn-primary btn-sm btn-rounded px-3"><i class="fa fa-folder-open"></i> Open</a>
+                                                </td>
+                                            </tr>
+                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="profile-b1">
+                            <div class="pending">
+                                <h4 class="card-title"> Imprests Pending Approval</h4>
+                                <br>
+                                <div class="table-responsive">
+                                    <table id="default_order" class="table border table-striped table-bordered text-nowrap" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>First name</th>
+                                                <th>Last name</th>
+                                                <th>Position</th>
+                                                <th>Office</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Tiger</td>
+                                                <td>Nixon</td>
+                                                <td>System Architect</td>
+                                                <td>Edinburgh</td>
+                                                <td>
+                                                    <a href="/imprest/details/" class="btn btn-primary btn-sm btn-rounded px-3"><i class="fa fa-folder-open"></i> Open</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Garrett</td>
+                                                <td>Winters</td>
+                                                <td>Accountant</td>
+                                                <td>Tokyo</td>
+                                                <td>
+                                                    <a href="/imprest/details/" class="btn btn-primary btn-sm btn-rounded px-3"><i class="fa fa-folder-open"></i> Open</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="settings-b1">
+                            <div class="approved">
+                                <h4 class="card-title">Approved Imprests</h4>
+                                <br>
+                                <div class="table-responsive">
+                                    <table id="zero_config" class="table border table-striped table-bordered text-nowrap" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>First name</th>
+                                                <th>Last name</th>
+                                                <th>Position</th>
+                                                <th>Office</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Tiger</td>
+                                                <td>Nixon</td>
+                                                <td>System Architect</td>
+                                                <td>Edinburgh</td>
+                                                <td>
+                                                    <a href="/imprest/details/" class="btn btn-primary btn-sm btn-rounded px-3"><i class="fa fa-folder-open"></i> Open</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tiger</td>
+                                                <td>Nixon</td>
+                                                <td>System Architect</td>
+                                                <td>Edinburgh</td>
+                                                <td><a href=""
+                                                    class="btn btn-primary">Detail</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- end card-body-->
+            </div> <!-- end card-->
+        </div> <!-- end col -->
+
+        
+    </div>
+    
+</div>
+{% block scripts %}
+<!--This page plugins -->
+<script src="../assets/extra-libs/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="../assets/extra-libs/datatables.net-bs4/js/dataTables.responsive.min.js"></script>
+<script src="../dist/js/pages/datatable/datatable-basic.init.js"></script>
+{% endblock %}
+{% endblock %}
